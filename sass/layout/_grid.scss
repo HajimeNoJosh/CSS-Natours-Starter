@@ -4,6 +4,10 @@
   margin: 0 auto;
 }
 
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+
 [class^="col-"] {
   &:not(:last-child) {
     margin-right: 6rem;
