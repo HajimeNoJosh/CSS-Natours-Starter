@@ -4,6 +4,7 @@
   "description": "",
   "main": "dist",
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "watch:sass": "node-sass sass/main.scss dist/css/style.css -w",
     "devserver": "live-server --open=dist",
     "start": "npm-run-all --parallel devserver watch:sass",
@@ -11,8 +12,7 @@
     "concat:css": "concat -o dist/css/style.concat.css dist/css/icon-font.css dist/css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' dist/css/style.comp.css -o dist/css/style.prefix.css",
     "compress:css": "node-sass dist/css/style.prefix.css dist/css/style.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css",
-    "deploy": "gh-pages -d dist"
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
   },
   "author": "",
   "license": "ISC",
